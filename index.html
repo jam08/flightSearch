@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getaway Flights</title>
+        <link rel="stylesheet" type="text/css" href="./style/mystyle.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+        </script>
+    </head>
+    <body>
+        <main>
+            <header class="b-header_main">
+                   <a href="logo.png">
+                        <img src="./images/getaway-flights.png" alt="Getaway Flights">
+                    </a>
+                <div clas="b-div_main">
+                    <h1 class="b-header__h1_main">GETAWAY FLIGHTS</h1>
+                    <h2 class="b-header__h2_break">helps you find the best getaways</h2>
+                </div>
+            </header>
+            <section class="b-section b-section_bot">
+                <header class="b-section__header"></header>
+                <div class="b-div chat-box">
+                    <div class="b-div left">
+                        <p>Tell us what you're looking for</p>
+                    </div>
+                    <div class="b-div right">
+                        <p>Just like you would say it to a travel agent</p>
+                    </div>
+                    <div class="b-div b-div__textarea">
+                        <textarea type="text" id="user-query"></textarea>
+                        <button class="b-div__btn_pos" type="button">
+                        <img src="./images/sendButton@2x.png" alt="Send">
+                    </button>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="b-section">
+                <header class="b-section__header banner">
+                    <img class="banner__img" src="./images/tag.png" alt="banner">
+                    <h1 class="banner__h1">LAST MINUTE GETAWAYS FROM:</h1>
+                    
+                </header>
+                <div class="b-div b-div__btn">
+                    <button class="b-div__btn_colour" type="button">London</button>
+                    <button class="b-div__btn_colour" type="button">Seattle</button>
+                    <button class="b-div__btn_colour" type="button">Dublin</button>
+                </div>
+            </section>
+            <section class="b-section b-section_s-results">
+                <table id="flights"></table>
+            </section>
+        </main>
+        <script src="./js/search.js"></script>
+        <script src="./js/displayFlights.js"></script>
+        <script src="./js/searchResults.js"></script>
+        <script src="./js/handleUserInput.js"></script>
+    </body>
+</html>

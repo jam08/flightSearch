@@ -1,0 +1,175 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+ *******************************
+ HEADER 
+ *******************************
+ */
+.b-header_main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255, 0);
+    z-index: 2;
+    font-size: 2.4rem;
+    color: #fff;
+}
+.b-div_main {
+    position: relative;
+    width: 50%;
+}
+
+.b-header__h2_break {
+    word-break: break-all;
+}
+
+
+/* 
+ *******************************
+ BOT SECTION 
+ *******************************
+ */
+
+.b-section_bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    width 100vw;
+    height: 90vh;
+    background-image: url("../images/m-backgroundImage@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 500;
+}
+.b-div {
+    width: 100vw;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+    width: 100vw;
+    height: 70vw;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.left {
+    width: 50vw;
+    text-align: left;
+    color: #ec2049;
+    margin-left: 4.5rem;
+}
+
+.right {
+    align-self: flex-end;
+    width: 50vw;
+    text-align: right;
+    color: #324150;
+    margin-right: 4.5rem;
+}
+textarea {
+    width: 90vw;
+    height: 20vw;
+    margin: 4.5rem;
+    font-size: 2.4rem;
+}
+
+.b-div__textarea {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.b-div__btn_pos {
+    position: absolute;
+    align-self: flex-end;
+    width: 20vw;
+    right: 1rem;
+}
+
+/* 
+ *******************************
+ LAST MINUTE GETAWAYS SECTION 
+ *******************************
+ */
+
+.b-section__header_banner {
+    position: relative;
+    left: 0;
+}
+
+.banner__h1 {
+    position: relative;
+    margin: 0 0 0 2rem;
+    font-size: 4rem;
+    bottom: 7rem;
+    color: #fff;
+}
+
+.banner__img {
+    position: relative;
+    width: 90vw;
+    top: 2rem;
+}
+.b-div__btn {
+    position: relative;
+    bottom: 1rem;
+}
+
+.b-div__btn_colour {
+    width: 33%;
+    height: 12vw;
+    font-size: 5rem;
+    /*background: rgba(93, 127, 151, 0.8)*/;
+    background-color: #5d7f97;
+    color: #fff;
+}
+
+/* 
+ *******************************
+ SEARCH RESULTS AREA 
+ *******************************
+ */
+.b-section_s-results {
+    background-color: #bfbfbf;
+}
+
+table {
+    width: 100%;
+    font-size: 3rem;
+}
+
+tr {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+}
+
+tb {
+    padding: 1rem;
+}
+
+.td-txtcolour {
+    color: #fff;
+}
+
+.td-colour {
+    background-color: #fff;
+}
