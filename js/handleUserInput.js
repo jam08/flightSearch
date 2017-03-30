@@ -1,6 +1,7 @@
 var handleQuery = (function() {
         function getInput() {
             var textarea = document.getElementById("user-query");
+            var button = document.getElementById("send");
             textarea.addEventListener("keydown", function(e) {
                 //console.log("here");
                 var code = (e.keycode ? e.keycode : e.which);
@@ -13,6 +14,10 @@ var handleQuery = (function() {
                     botAPI.request(userQuery);
                 }
             });
+            button.addEventListener("click", function() {
+                var userQuery = textarea.value;
+                botAPI.request(userQuery);
+            })
         }
         return {
             userInput: getInput

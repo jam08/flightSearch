@@ -1,3 +1,5 @@
+/* Builds the flight display section of the HTML document */
+
 var flights = {
      display: function(flightObj, fromCity, toCity) {
          //console.log(fromCity);
@@ -49,5 +51,12 @@ var flights = {
          
          table.appendChild(tr1);
          table.appendChild(tr2); 
-     }
+     },
+    displayError: function(message) {
+        var section = document.getElementById("results");
+        var p = document.createElement("p");
+        var text = document.createTextNode(message);
+        p.appendChild(text);
+        section.appendChild(p);
+    }
 };

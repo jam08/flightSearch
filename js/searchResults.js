@@ -1,3 +1,5 @@
+/* Amadeus API */
+
 var flightSearch = {
     inspirationSearch: "https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=CA3oN6siDkcGuXDwgYSEFG5wO9zVdG0d&origin=",
     
@@ -24,7 +26,6 @@ var flightSearch = {
             date = (todaysDate.toJSON()).substring(0, 10);
             //console.log(date);
         }
-        
         /*
          *Check if destination is specified
          *If user specified destination, 
@@ -44,12 +45,6 @@ var flightSearch = {
             flightSearch.inpirationFlightSearch(originSearchURL);
             //console.log(myFlights);
         }
-        //XXX&destination=YYY
-        //origin=FRA&
-        //destination=LON&
-        //departure_date=2017-06-30&
-        //one-way=false& - not required
-        //duration=15 
     },
     
     inpirationFlightSearch: function(originCodeURL) {
@@ -92,7 +87,7 @@ var flightSearch = {
                     //console.log(toCityCode);
                 }
             })
-            //Request extensive search
+            //Request - extensive search
             let url = `${flightSearch.extensiveSearch}${fromCityCode.value}&destination=${toCityCode.value}&departure_date=${date}`;
             //console.log(url);
             $.get(url).then(function(searchObj){
@@ -101,10 +96,13 @@ var flightSearch = {
                     flights.display(arrElem, fromCityCode.label, toCityCode.label);
                     //return arrElem; 
                     //console.log(Object.values(arrElem));
-                }), function(xhr, state, err) {
-                        console.log(xhr);
-                }  
-            })
+                  });   
+            }, function(xhr, state, err) {
+                        //console.log("Shit happens!")
+                        var resp = xhr.responseJSON; 
+                        flights.displayError(resp.message);
+                        //console.log(resp.message);
+            });
             //$.when();
         }), function(xhr, state, err) {
             console.log("Shit happens!");

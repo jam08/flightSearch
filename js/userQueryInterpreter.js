@@ -1,28 +1,24 @@
+/* Wit.ai API */
 var botAPI = {
     request: function(userSays) {
+        //Check if user typed something
         if(!userSays) {
-            //console.log("nothing yet");
-            //console.log(userSays);
         } else {
-            /*console.log("I'm another module")
-            console.log(userSays);*/
             $(document).ready(function() {
                 //console.log(userSays);
                 $.ajax({
                   url: 'https://api.wit.ai/message',
                   data: {
-                    //'q': 'Flights from Stockholm to Sao Paulo tomorrow.',
                     'q': userSays,
                     'access_token' : 'HRZHJ2GWGIMMLSCAAFVQYJRAPZVFRLMC'
                   },
                   dataType: 'jsonp',
                   method: 'GET',
                   success: function(response) {
-                      //response.entities returns the 
-                      //entities obj that contains 
-                      //console.log("success!", response.entities);
-                      //return response.entities;
-                      console.log(Object.keys(response.entities)); //["from", "to", "intent"]
+                      /*response.entities returns the 
+                       *entities obj
+                       */
+                      //console.log(Object.keys(response.entities)); //["from", "to", "intent"]
                       flightSearch.findFlights(response.entities);
                   },
                   error: function(req, status, err) {
