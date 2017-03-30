@@ -9,6 +9,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 main {
     width: 100%;
@@ -22,6 +23,9 @@ main {
  */
 .b-header_main {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     top: 0;
     width: 100%;
     height: auto;
@@ -33,21 +37,21 @@ main {
 .logo {
     width: 5rem;
     height: auto;
-}
-.b-header__h1_main {
-    font-size: 1.8rem;
-}
-.b-header__h2_break {
-    font-size: 1.6rem;
-    word-break: break-all;
+    margin: 1rem;
 }
 
-@media screen and (min-width: 60em) {
-    .logo {
-        width: 5rem;
-        height: auto;
-    }
+.b-header__h1_main {
+    margin: 1rem 1rem 0 1rem;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 1.8rem;
+    font-style: italic;
 }
+.b-header__h2_break {
+    margin: 0 1rem 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
 /* 
  *******************************
  BOT SECTION 
@@ -66,8 +70,6 @@ main {
     background-size: cover;
     z-index: 1;
     color: #fff;
-    font-size: 2rem;
-    font-weight: 500;
 }
 
 .chat-box {
@@ -78,14 +80,14 @@ main {
     width: 100%;
     height: 60%;
     margin: 5% 0 2% 0;
-    background: rgba(255, 255, 255, 0.5);
 }
 
 .b-div_left {
     width: 50%;
     height: auto;
     text-align: left;
-    color: #ec2049;
+    /*color: #ec2049;*/
+    color: #fff;
     margin-left: 5%;
 }
 
@@ -94,12 +96,13 @@ main {
     width: 50%;
     height: auto;
     text-align: right;
-    color: #324150;
+    color: #fff;
     margin: auto 5% 0 auto;
 }
 
 p {
     margin-bottom: 0;
+    font-size: 1.6rem;
 }
 
 .b-div__textarea {
@@ -107,23 +110,23 @@ p {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 60%;
+    height: 70%;
 }
 
 textarea {
     width: 90%;
     height: 60%;
-    margin: 1% 5% 3% 5%;
+    margin: 1% 5% 1% 5%;
     font-size: 3rem;
 }
 .b-div__btn_pos {
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 30%;
-    height: 20%;
+    height: 30%;
     background-color: #ec2049;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: auto;
     border-style: none;
     padding: 0;
@@ -141,7 +144,12 @@ textarea {
     
     .chat-box {
         width: 65%;
-        margin: 12% auto 1% auto;
+        height: 40%;
+        margin: 10% auto 2% auto;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 2rem;
     }
     .b-div__textarea {
         height: 50%;
@@ -176,36 +184,44 @@ textarea {
  *******************************
  */
 
-.b-section__header_banner {
+.banner {
     position: relative;
-    left: 0;
+    width: 85%;
+    height: 10%;
+    background-color: #ec2049;
+    margin: 1rem 0 1rem 0;
+    text-align: left;
+    
 }
 
+/*.banner__img {
+    position: relative;
+    width: 90vw;
+}*/
 .banner__h1 {
     position: relative;
-    margin: 0 0 0 2rem;
-    font-size: 4rem;
-    bottom: 7rem;
+    margin: 0;
+    font-size: 1.6rem;
     color: #fff;
 }
 
-.banner__img {
-    position: relative;
-    width: 90vw;
-    top: 2rem;
-}
+
 .b-div__btn {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     bottom: 1rem;
+    margin: 2rem auto auto auto;
 }
 
 .b-div__btn_colour {
     width: 33%;
-    height: 12vw;
-    font-size: 5rem;
-    /*background: rgba(93, 127, 151, 0.8)*/;
+    height: 10%;
+    font-size: 2.4rem;
     background-color: #5d7f97;
     color: #fff;
+    border-style: none;
 }
 
 /* 
