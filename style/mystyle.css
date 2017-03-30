@@ -115,7 +115,7 @@ p {
 
 textarea {
     width: 90%;
-    height: 60%;
+    height: 30%;
     margin: 1% 5% 1% 5%;
     font-size: 1.8rem;
 }
@@ -127,7 +127,7 @@ textarea {
     background-color: #ec2049;
     color: #fff;
     font-size: 1.6rem;
-    margin: auto;
+    margin: 1rem auto auto auto;
     border-style: none;
     padding: 0;
 }
