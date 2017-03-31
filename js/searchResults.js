@@ -96,12 +96,13 @@ var flightSearch = {
                     flights.display(arrElem, fromCityCode.label, toCityCode.label);
                     //return arrElem; 
                     //console.log(Object.values(arrElem));
-                  });   
+                  });
+                flights.pageJump();
             }, function(xhr, state, err) {
-                        //console.log("Shit happens!")
-                        var resp = xhr.responseJSON; 
-                        flights.displayError(resp.message);
-                        //console.log(resp.message);
+                    var resp = xhr.responseJSON;
+                    flights.displayError(resp.message);
+                    flights.pageJump();
+                    //console.log(resp.message);
             });
             //$.when();
         }), function(xhr, state, err) {

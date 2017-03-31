@@ -58,5 +58,10 @@ var flights = {
         var text = document.createTextNode(message);
         p.appendChild(text);
         section.appendChild(p);
+    },
+    pageJump: function() {
+        document.querySelector('#results').scrollIntoView({
+            behavior: 'smooth'
+        });
     }
 };
