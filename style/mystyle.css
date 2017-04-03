@@ -30,7 +30,7 @@ main {
     width: 100%;
     height: auto;
     background: rgba(255, 255, 255, 0);
-    z-index: 2;
+    z-index: 3;
     color: #fff;
 }
 
@@ -68,7 +68,7 @@ main {
     background-image: url("../images/m-backgroundImage@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 1;
+    z-index: 2;
     color: #fff;
 }
 
@@ -265,6 +265,7 @@ textarea {
     background: rgba(255, 255, 255, 0.5);
     margin: 0;
     padding: 0;
+    z-index: 1;
 }
 .cube-grid {
     position: absolute;
