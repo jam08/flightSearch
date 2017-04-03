@@ -50,19 +50,23 @@ var flightSearch = {
     inpirationFlightSearch: function(originCodeURL) {
         //make the request
         $.get(originCodeURL).then(function(cityCode){
-            console.log(cityCode[0].value);
+            //console.log(cityCode[0].value);
             var flightReqURL = `${flightSearch.inpirationSearch}${cityCode[0].value}`;
             //console.log(flightReqURL);
             //returns a promise
             return $.get(flightReqURL);
             }).then(function(obj) {
+                //Hide loader
+                document.getElementById("loader").style.display = "none";
                 var test = Object.values(obj);
                 test[2].map(function(item) {
                     //return item;
                     console.log(item);
                 })
         }), function(xhr, state, err) {
-               console.log("something went wrong!");
+                //Hide loader
+                document.getElementById("loader").style.display = "none";
+                console.log("something went wrong!");
        }
     },
     
@@ -91,6 +95,8 @@ var flightSearch = {
             let url = `${flightSearch.extensiveSearch}${fromCityCode.value}&destination=${toCityCode.value}&departure_date=${date}`;
             //console.log(url);
             $.get(url).then(function(searchObj){
+                //Hide loader when promise succeed
+                document.getElementById("loader").style.display = "none";
                 searchObj.results.map(function(arrElem) {
                     //console.log(arrElem)
                     flights.display(arrElem, fromCityCode.label, toCityCode.label);
@@ -99,6 +105,8 @@ var flightSearch = {
                   });
                 flights.pageJump();
             }, function(xhr, state, err) {
+                    //Hide loader
+                    document.getElementById("loader").style.display = "none";
                     var resp = xhr.responseJSON;
                     flights.displayError(resp.message);
                     flights.pageJump();
