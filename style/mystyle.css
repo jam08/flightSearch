@@ -258,6 +258,7 @@ textarea {
   border: 0.5rem solid #f3f3f3;
   border-radius: 50%;
   border-top: 0.5rem solid #ec2049;
+  background-color: #fff;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
