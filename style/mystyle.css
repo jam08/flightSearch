@@ -254,7 +254,7 @@ textarea {
  *******************************
  */
 
-.loader {
+#loader {
     display: none;
     position: absolute;
     left: 50%;
