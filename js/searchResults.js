@@ -57,7 +57,8 @@ var flightSearch = {
             return $.get(flightReqURL);
             }).then(function(obj) {
                 //Hide loader
-                document.getElementById("loader").style.display = "none";
+                //document.getElementById("loader").style.display = "none";
+                loader.loadDone();
                 var test = Object.values(obj);
                 test[2].map(function(item) {
                     //return item;
@@ -65,7 +66,8 @@ var flightSearch = {
                 })
         }), function(xhr, state, err) {
                 //Hide loader
-                document.getElementById("loader").style.display = "none";
+                //document.getElementById("loader").style.display = "none";
+                loader.loadDone();
                 console.log("something went wrong!");
        }
     },
@@ -96,7 +98,8 @@ var flightSearch = {
             //console.log(url);
             $.get(url).then(function(searchObj){
                 //Hide loader when promise succeed
-                document.getElementById("loader").style.display = "none";
+                //document.getElementById("loader").style.display = "none";
+                loader.loadDone();
                 searchObj.results.map(function(arrElem) {
                     //console.log(arrElem)
                     flights.display(arrElem, fromCityCode.label, toCityCode.label);
@@ -106,7 +109,8 @@ var flightSearch = {
                 flights.pageJump();
             }, function(xhr, state, err) {
                     //Hide loader
-                    document.getElementById("loader").style.display = "none";
+                    //document.getElementById("loader").style.display = "none";
+                    loader.loadDone();
                     var resp = xhr.responseJSON;
                     flights.displayError(resp.message);
                     flights.pageJump();

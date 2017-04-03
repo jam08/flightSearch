@@ -6,7 +6,8 @@ var botAPI = {
         } else {
             $(document).ready(function() {
                 //show loader
-                document.getElementById("loader").style.display = "block";
+                //document.getElementById("loader").style.display = "block";
+                loader.loading();
                 //console.log(userSays);
                 $.ajax({
                   url: 'https://api.wit.ai/message',
