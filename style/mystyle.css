@@ -265,6 +265,7 @@ textarea {
     background: rgba(255, 255, 255, 0.5);
     margin: 0;
     padding: 0;
+    z-index: 2;
 }
 .cube-grid {
     position: absolute;
