@@ -1,11 +1,11 @@
 /* Amadeus API */
 
 var flightSearch = {
-    inspirationSearch: "https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=CA3oN6siDkcGuXDwgYSEFG5wO9zVdG0d&origin=",
+    inspirationSearch: "https://flightsearchapi.herokuapp.com/flights/inspiration-search?origin=",
     
-    extensiveSearch: "https://api.sandbox.amadeus.com/v1.2/flights/extensive-search?apikey=CA3oN6siDkcGuXDwgYSEFG5wO9zVdG0d&origin=",
+    extensiveSearch: "https://flightsearchapi.herokuapp.com/flights/extensive-search?origin=",
         
-    IATACityCode: "https://api.sandbox.amadeus.com/v1.2/airports/autocomplete?apikey=CA3oN6siDkcGuXDwgYSEFG5wO9zVdG0d&term=",
+    IATACityCode: "https://flightsearchapi.herokuapp.com/airports/autocomplete?term=",
     
     findFlights: function(entitiesObj) {
         var date;
