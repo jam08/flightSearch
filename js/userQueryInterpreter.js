@@ -12,7 +12,7 @@ var botAPI = {
                   url: 'https://api.wit.ai/message',
                   data: {
                     'q': userSays,
-                    'access_token' : ''
+                    'access_token' : 'MVBR25GB6BIOALLCQ7EPCTZ2JMJOIT7J'
                   },
                   dataType: 'jsonp',
                   method: 'GET',
