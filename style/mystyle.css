@@ -245,11 +245,110 @@ textarea {
  SEARCH RESULTS AREA 
  *******************************
  */
-
 .b-section_s-results {
     background-color: #bfbfbf;
 }
 
+/* 
+ LOADING SPINNER 
+ *******************************
+ */
+
+.loading-spinner {
+    display: none;
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+.cube-grid {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+}
+
+.cube-grid .sm-cube {
+    width: 33%;
+    height: 33%;
+    background-color:beige;
+    float: left;
+    -webkit-animation: cubeScaleDelay 1.3s infinite ease-in-out;
+    animation: cubeScaleDelay 1.3s infinite ease-in-out;
+}
+
+.cube-grid .sm-cube1 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.cube-grid .sm-cube2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.cube-grid .sm-cube3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.cube-grid .sm-cube4 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.cube-grid .sm-cube5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.cube-grid .sm-cube6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.cube-grid .sm-cube7 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.cube-grid .sm-cube8 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.cube-grid .sm-cube9 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes cubeScaleDelay {
+    0% 70% 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+         transform: scale3D(0, 0, 1);   
+    }
+}
+
+@keyframes cubeScaleDelay {
+     0% 70% 100% {
+         -webkit-transform: scale3D(1, 1, 1);
+         transform: scale3D(1, 1, 1);   
+    }
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+         transform: scale3D(0, 0, 1);   
+    }
+}
+/*
 #loader {
   display: none;
   position: relative;
@@ -259,19 +358,19 @@ textarea {
   border: 0.5rem solid #f3f3f3;
   border-radius: 50%;
   border-top: 0.5rem solid #ec2049;
+  background-color: #fff;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
-
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+*/
 
 table {
     width: 100%;
