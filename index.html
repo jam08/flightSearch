@@ -5,62 +5,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Getaway Flights</title>
         <link rel="stylesheet" type="text/css" href="style/mystyle.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Tulpen+One" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
         </script>
     </head>
     <body>
         <main>
-            <header class="b-header_main">
-                <a href="logo.png">
-                    <img class="logo" src="./images/getaway-flights.png" alt="Getaway Flights">
-                </a>
-                <div clas="b-div_main">
-                    <h1 class="b-header__h1_main">GETAWAY FLIGHTS</h1>
-                    <h2 class="b-header__h2_break">Helps you find the best getaways</h2>
-                </div>
-            </header>
-            <section class="b-section b-section_bot">
-                <header class="b-section__header"></header>
-                <div class="chat-box">
-                    <div class="b-div_left">
-                        <p>Tell us what you're looking for...</p>
-                    </div>
-                    <div class="b-div_right">
-                        <p>just like you would say it to a travel agent.</p>
-                    </div>
-                    <div class="b-div__textarea">
-                        <textarea type="text" id="user-query"></textarea>
-                        <button class="b-div__btn_pos" type="submit" id="send">Send</button>
-                    </div>
-                </div>
-            </section>
-            <!--<section class="b-section banner_section">
-                <header class="b-section__header banner">
-                    <h1 class="banner__h1">LAST MINUTE GETAWAYS FROM:</h1>    
+            <div class="top">
+                <header class="main__header">
+                    <a href="index.html">
+                        <img class="logo" src="images/logo@2x.png" alt="Getaway Flights">
+                    </a>
                 </header>
-                <div class="b-div__btn">
-                    <button class="b-div__btn_colour" type="button">London</button>
-                    <button class="b-div__btn_colour" type="button">Seattle</button>
-                    <button class="b-div__btn_colour" type="button">Dublin</button>
-                </div>
-            </section>-->
-            <section class="b-section_s-results" id="results">
-                <div id="loader" class="loading-spinner">
-                    <div class="cube-grid">
-                        <div class="sm-cube sm-cube1"></div>
-                        <div class="sm-cube sm-cube2"></div>
-                        <div class="sm-cube sm-cube3"></div>
-                        <div class="sm-cube sm-cube4"></div>
-                        <div class="sm-cube sm-cube5"></div>
-                        <div class="sm-cube sm-cube6"></div>
-                        <div class="sm-cube sm-cube7"></div>
-                        <div class="sm-cube sm-cube8"></div>
-                        <div class="sm-cube sm-cube9"></div>
+                <section class="b-section bot">
+                    <header class="bot__header">
+                        <h2>Where will your next escpae take you to?</h2>
+                    </header>
+                    <div class="chat-box">
+                        <textarea type="text" id="user-query" placeholder="What's in your mind?"></textarea>
+                        <button class="chat-box__btn" type="submit" id="send">Find</button>
                     </div>
-                </div>
-                <!--<div id="loader"></div>-->
-                <table id="flights"></table>
-            </section>
+                </section>
+            </div>
+            <div class="bottom">
+                <section class="b-section search-results" id="results">
+                    <div id="loader" class="loading-spinner">
+                        <div class="cube-grid">
+                            <div class="sm-cube sm-cube1"></div>
+                            <div class="sm-cube sm-cube2"></div>
+                            <div class="sm-cube sm-cube3"></div>
+                            <div class="sm-cube sm-cube4"></div>
+                            <div class="sm-cube sm-cube5"></div>
+                            <div class="sm-cube sm-cube6"></div>
+                            <div class="sm-cube sm-cube7"></div>
+                            <div class="sm-cube sm-cube8"></div>
+                            <div class="sm-cube sm-cube9"></div>
+                        </div>
+                    </div>
+                    <table id="flights"></table>
+                </section>
+            </div>
         </main>
         <script src="./js/spinner.js"></script>
         <script src="./js/userQueryInterpreter.js"></script>
