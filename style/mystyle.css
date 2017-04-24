@@ -228,7 +228,8 @@ tb {
 }
 
 .td-txtcolour {
-    color: #2d0b04;
+    color: #fff;
+    background-color: #2d0b04;
 }
 
 .td-colour {
