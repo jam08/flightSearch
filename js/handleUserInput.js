@@ -11,55 +11,28 @@ var handleQuery = (function() {
                     //remove focus after pressing the
                     //Enter key
                     textarea.blur();
+                    cleanSearch();
                     botAPI.request(userQuery);
+                    textarea.value = "";
                 }
             });
             button.addEventListener("click", function() {
                 var userQuery = textarea.value;
+                cleanSearch();
                 botAPI.request(userQuery);
-            })
+                textarea.value = "";
+            });
+        }
+        function cleanSearch() {
+            var flightTable = document.getElementById("flights");
+            if(flightTable.hasChildNodes) {
+                while(flightTable.firstChild) {
+                    flightTable.removeChild(flightTable.firstChild);
+                } 
+            }   
         }
         return {
             userInput: getInput
         }
 })();
 handleQuery.userInput();
-
-
-/*
-{
-   "entities": {
-     "from": [
-       {
-         "role": "from",
-         "confidence": 0.9216031505447422,
-         "start": 13,
-         "end": 22,
-         "body": "Stockholm",
-         "value": {
-           "value": "Stockholm"
-         },
-         "entity": "location"
-       }
-     ],
-     "to": [
-       {
-         "role": "to",
-         "confidence": 0.7873190227947731,
-         "start": 26,
-         "end": 35,
-         "body": "Sao Paulo",
-         "value": {
-           "value": "Sao Paulo"
-         },
-         "entity": "location"
-       }
-     ]
-    }
-}
-
-from[{objFrom}] (Type Array)
-var origin = entities.from[0].body;
-var destination = entities.to[0].body;
-*/
-

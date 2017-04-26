@@ -2,9 +2,6 @@
 
 var flights = {
      display: function(flightObj, fromCity, toCity) {
-         //console.log(fromCity);
-         //console.log(toCity);
-         //console.log(flightObj);
          var outbound = `${fromCity} to ${toCity}`
          console.log(outbound);
          var table = document.getElementById("flights");
