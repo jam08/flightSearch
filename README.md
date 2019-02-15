@@ -3,9 +3,6 @@
 
 ## Janaina Marana, JavaScript 2, FEND16
 
-
-https://jam08.github.io/flightSearch/
-
 Getaway flights lets users find flights by simply typing a sentence, just in the same way he/she would say it to a travel agent or an airline personnel.
 
 
